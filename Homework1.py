@@ -6,4 +6,3 @@ elif age < 5:
     print("You are a baby")
 else:
     print("You are a minor")
-
