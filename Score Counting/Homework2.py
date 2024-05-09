@@ -1,3 +1,5 @@
+"""This program is used to calculate the average score of a classroom is used to count the number of scores,
+calculate the sum of scores, calculate the average of scores."""
 count = 0
 sum = 0
 avg = 0

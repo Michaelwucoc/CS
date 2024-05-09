@@ -1,4 +1,4 @@
-# Example code
+# Example code of Henry
 count = 0
 total = 0
 avg = 0
