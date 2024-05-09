@@ -1,3 +1,9 @@
+count = 0
+sum = 0
+avg = 0
+score_list = []
+
+
 def convert_score_to_grade(score):
     if score >= 90:
         return 'A'
@@ -11,7 +17,6 @@ def convert_score_to_grade(score):
         return 'F'
 
 
-# Ask user to input number score
 while True:
     score = int(input("Enter the number score: "))
 
@@ -22,4 +27,11 @@ while True:
             break
     else:
         grade = convert_score_to_grade(score)
-        print(print("The letter grade for", score, "is:", grade))
+        count += 1
+        score_list.append(score)
+        sum += score
+        score_list.sort()
+        avg = (sum - min(score_list) - max(score_list)) / (count - 2) if count > 2 else sum / count
+
+        print("The letter grade for", score, "is:", grade, "counted:", count, "current sum:", sum,
+              "current avg: {:.2f}".format(avg))
