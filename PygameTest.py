@@ -1,13 +1,26 @@
 import pygame
 
+# Write a snake game
+
 pygame.init()
 
-screen = pygame.display.set_mode((500, 500))
+screen = pygame.display.set_mode((640, 480))
 
-while True:
+pygame.display.set_caption("Snake Game")
+
+clock = pygame.time.Clock()
+
+running = True
+
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            quit()
+            running = False
+
+    screen.fill((0, 0, 0))
 
     pygame.display.flip()
+
+    clock.tick(60)
+
+pygame.quit()
